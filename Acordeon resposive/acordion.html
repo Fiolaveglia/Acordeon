@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="acordion.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hola trola</h1>
+    <!-- These variables help keep track of the input name and ID-->
+    <!-- currentTab helps keep track of each individual input-->
+    <!-- tabControlName is used as a unique identifier for the accordion-->
+    
+    <ul >
+        <li>
+            <!-- Using radio inputs means only one can be selected at a time-->
+            <!-- The ID must be unique so the label will point to the input-->
+            <input id="rad1" type="radio" name="rad" checked="checked" />
+            <label class="muestra" for="rad1">
+                <div>Periodista</div>
+            </label>
+            <div class="accslide">
+                <div class="content">
+                    <article class="col-1">
+                        <img src="./img/Aerie.jpg" alt="">
+                    </article>
+                    <article class="col-2">
+                        <h4>Periodista</h4>
+                        <h5>Movilera/entrevistadora</h5>
+                        <p >-TV online, Montevideo Portal fue pionera en la producción de contenidos
+                            propios, creando Canal M. Allí hice tres temporadas de Con Faldas y a lo Loco.
+                            Entrevistas a mujeres y hombres inspiradores, desconocidos que tenían historias de
+                            vida impactantes y que de alguna manera volcaban sus enseñanzas a la sociedad.
+                            <br>-Fui galardonada Premio Tálice a la Labor en Periodismo Científico
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </li>
+        <li>
+            <!-- Using radio inputs means only one can be selected at a time-->
+            <!-- The ID must be unique so the label will point to the input-->
+            <input id="rad2" type="radio" name="rad" />
+            <label class="muestra" for="rad2">
+                <div>Second panel</div>
+            </label>
+            <div class="accslide">
+                <div class="content">
+                    <article class="col-1">
+                        <img src="./img/Dunkin+At+Home+copy.jpg" alt="">
+                    </article>
+                    <article class="col-2">
+                        <h4>Periodista</h4>
+                        <h5>Movilera/entrevistadora</h5>
+                        <p >-TV online, Montevideo Portal fue pionera en la producción de contenidos
+                            propios, creando Canal M. Allí hice tres temporadas de Con Faldas y a lo Loco.
+                            Entrevistas a mujeres y hombres inspiradores, desconocidos que tenían historias de
+                            vida impactantes y que de alguna manera volcaban sus enseñanzas a la sociedad.
+                            <br>-Fui galardonada Premio Tálice a la Labor en Periodismo Científico
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </li>
+        <li>
+            <!-- Using radio inputs means only one can be selected at a time-->
+            <!-- The ID must be unique so the label will point to the input-->
+            <input id="rad3" type="radio" name="rad" />
+            <label class="muestra" for="rad3">
+                <div>Third panel</div>
+            </label>
+            <div class="accslide">
+                <div class="content">
+                    <article class="col-1">
+                        <img src="./img/Etsy.jpg" alt="">
+                    </article>
+                    <article class="col-2">
+                        <h4>Periodista</h4>
+                        <h5>Movilera/entrevistadora</h5>
+                        <p >-TV online, Montevideo Portal fue pionera en la producción de contenidos
+                            propios, creando Canal M. Allí hice tres temporadas de Con Faldas y a lo Loco.
+                            Entrevistas a mujeres y hombres inspiradores, desconocidos que tenían historias de
+                            vida impactantes y que de alguna manera volcaban sus enseñanzas a la sociedad.
+                            <br>-Fui galardonada Premio Tálice a la Labor en Periodismo Científico
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </li>
+        <li>
+            <!-- Using radio inputs means only one can be selected at a time-->
+            <!-- The ID must be unique so the label will point to the input-->
+            <input id="rad4" type="radio" name="rad" />
+            <label class="muestra" for="rad4">
+                <div>Fourth panel</div>
+            </label>
+            <div class="accslide">
+                <div class="content">
+                    <article class="col-1">
+                        <img src="./img/fabletics.jpg" alt="">
+                    </article>
+                    <article class="col-2">
+                        <h4>Periodista</h4>
+                        <h5>Movilera/entrevistadora</h5>
+                        <p >-TV online, Montevideo Portal fue pionera en la producción de contenidos
+                            propios, creando Canal M. Allí hice tres temporadas de Con Faldas y a lo Loco.
+                            Entrevistas a mujeres y hombres inspiradores, desconocidos que tenían historias de
+                            vida impactantes y que de alguna manera volcaban sus enseñanzas a la sociedad.
+                            <br>-Fui galardonada Premio Tálice a la Labor en Periodismo Científico
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <script>
+        let acordeones = document.getElementsByClassName('accslide');
+        let etiquetas = document.getElementsByClassName('muestra'); 
+
+        for(etiqueta of etiquetas) {
+        etiqueta.addEventListener('click', (e)=> {
+            console.log(e.target);
+            for(acordeon of acordeones) {
+            acordeon.classList.toggle("visible"); 
+            }
+        })
+    }
+    </script>
+</body>
+
+</html>
